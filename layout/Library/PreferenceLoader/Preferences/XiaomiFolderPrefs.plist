@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://apple.com">
+<plist version="1.0">
+<dict>
+<key>entry</key>
+<dict>
+<key>bundle</key>
+<string>XiaomiFolderPrefs</string>
+<key>cell</key>
+<string>PSLinkCell</string>
+<key>detail</key>
+<string>XMFRootListController</string>
+<key>label</key>
+<string>Xiaomi-Folder</string>
+</dict>
+</dict>
+</plist>
