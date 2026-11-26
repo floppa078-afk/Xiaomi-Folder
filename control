@@ -1,0 +1,10 @@
+PREFIX ?= package
+Package: com.floppa078afk.xiaomifolder
+Name: Xiaomi-Folder
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Xiaomi-style folder sizes for iOS
+Maintainer: floppa078-afk
+Author: floppa078-afk
+Section: Tweaks
+Depends: mobilesubstrate, preferenceloader

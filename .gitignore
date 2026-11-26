@@ -1,0 +1,7 @@
+*.o
+*.d
+*.deb
+.packages/
+packages/
+.build/
+.DS_Store

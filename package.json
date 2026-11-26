@@ -1,0 +1,9 @@
+{
+    "name": "Xiaomi-Folder",
+    "description": "Xiaomi-inspired folder sizes for iOS",
+    "maintainer": "floppa078-afk",
+    "version": "1.0.0",
+    "rootless": true,
+    "ios": "16.0-16.7.15",
+    "jailbreak": "Dopamine"
+}

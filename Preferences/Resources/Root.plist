@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-"//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>items</key>
+    <array>
+        <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>label</key>
+            <string>Xiaomi-Folder</string>
+            <key>footerText</key>
+            <string>Select a folder preview size. Respring SpringBoard after changing the mode.</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSLinkListCell</string>
+            <key>detail</key>
+            <string>PSListItemsController</string>
+            <key>key</key>
+            <string>XMFMode</string>
+            <key>label</key>
+            <string>Folder size</string>
+            <key>defaults</key>
+            <string>com.floppa078afk.xiaomifolder</string>
+            <key>default</key>
+            <integer>1</integer>
+            <key>values</key>
+            <array>
+                <integer>0</integer>
+                <integer>1</integer>
+                <integer>2</integer>
+            </array>
+            <key>titles</key>
+            <array>
+                <string>Обычный</string>
+                <string>Увеличенный</string>
+                <string>XXL</string>
+            </array>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+        </dict>
+        <dict>
+            <key>action</key>
+            <string>respring</string>
+            <key>cell</key>
+            <string>PSButtonCell</string>
+            <key>label</key>
+            <string>Respring</string>
+        </dict>
+    </array>
+</dict>
+</plist>
