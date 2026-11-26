@@ -1,0 +1,42 @@
+name: Build rootless package
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-14
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Install build tools
+        run: brew install dpkg ldid
+
+      - name: Install Theos and iOS SDK
+        shell: bash
+        run: |
+          git clone --recursive --depth 1 https://github.com/theos/theos.git "$HOME/theos"
+          git clone --depth 1 https://github.com/theos/sdks.git "$RUNNER_TEMP/theos-sdks"
+
+          mkdir -p "$HOME/theos/sdks"
+          cp -R "$RUNNER_TEMP"/theos-sdks/*.sdk "$HOME/theos/sdks/"
+
+          echo "THEOS=$HOME/theos" >> "$GITHUB_ENV"
+          echo "$HOME/theos/bin" >> "$GITHUB_PATH"
+
+      - name: Validate plist files
+        run: find . -name '*.plist' -print0 | xargs -0 -n 1 plutil -lint
+
+      - name: Build rootless Debian package
+        run: make clean package FINALPACKAGE=1
+
+      - name: Upload .deb artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Xiaomi-Folder-rootless-deb
+          path: packages/*.deb
+          if-no-files-found: error
