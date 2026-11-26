@@ -17,10 +17,12 @@ jobs:
         run: brew install dpkg ldid
 
       - name: Install Theos and iOS SDK
+        env:
+          GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
-          git clone --recursive --depth 1 https://github.com "$HOME/theos"
-          git clone --depth 1 https://github.com "$RUNNER_TEMP/theos-sdks"
+          gh repo clone theos/theos "$HOME/theos" -- --recursive --depth 1
+          gh repo clone theos/sdks "$RUNNER_TEMP/theos-sdks" -- --depth 1
           mkdir -p "$HOME/theos/sdks"
           cp -R "$RUNNER_TEMP"/theos-sdks/*.sdk "$HOME/theos/sdks/"
           echo "THEOS=$HOME/theos" >> "$GITHUB_ENV"
