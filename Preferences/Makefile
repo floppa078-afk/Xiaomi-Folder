@@ -1,3 +1,5 @@
+TARGET = iphone:clang:16.5:16.0
+
 include $(THEOS)/makefiles/common.mk
 
 BUNDLE_NAME = XiaomiFolderPrefs
