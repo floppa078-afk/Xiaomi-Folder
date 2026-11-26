@@ -1,3 +1,5 @@
+include $(THEOS)/makefiles/common.mk
+
 BUNDLE_NAME = XiaomiFolderPrefs
 XiaomiFolderPrefs_FILES = XMFRootListController.m
 XiaomiFolderPrefs_INSTALL_PATH = /Library/PreferenceBundles
