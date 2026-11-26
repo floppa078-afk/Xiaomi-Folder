@@ -1,9 +1,8 @@
-PREFIX ?= package
 Package: com.floppa078afk.xiaomifolder
 Name: Xiaomi-Folder
 Version: 1.0.0
-Architecture: iphoneos-arm
-Description: Xiaomi-style folder sizes for iOS
+Architecture: iphoneos-arm64
+Description: Xiaomi-inspired folder sizing for iOS 16
 Maintainer: floppa078-afk
 Author: floppa078-afk
 Section: Tweaks
